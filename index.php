@@ -23,42 +23,20 @@
 	$action = (isset($_GET['action'])) ? htmlentities($_GET['action']) : 'default';
 	# Quelle action est demandée ?
 
-function getGenesisController() {
-    require_once('controllers/GenesisController.php');
-    $controller = new GenesisController();
-    return $controller;
-}
-
-function getBookController() {
-    require_once('controllers/BooksController.php');
-    $controller = new BooksController();
-    return $controller;
-}
-
-function getContactController() {
-    require_once('controllers/ContactController.php');
-    $controller = new ContactController();
-    return $controller;
-}
-
-function getHomeController() {
-    require_once('controllers/HomeController.php');
-    $controller = new HomeController();
-    return $controller;
-}
+require_once('controllers/SwitchController.php');
 
 switch($action) {
 		case 'genesis':
-			$controller = getGenesisController();
+			$controller = SwitchController::getGenesisController();
             break;
 		case 'books':
-            $controller = getBookController();
+            $controller = SwitchController::getBookController();
 			break;
 		case 'contact':
-            $controller = getContactController();
+            $controller = SwitchController::getContactController();
 			break;	
 		default: # Par défaut, le contrôleur de l'accueil est sélectionné
-            $controller = getHomeController();
+            $controller = SwitchController::getHomeController();
 			break;
 	}
 	# Exécution du contrôleur correspondant à l'action demandée
