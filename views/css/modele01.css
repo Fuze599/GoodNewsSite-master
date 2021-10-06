@@ -31,7 +31,7 @@ strong {
 
 /* En-tête */
 #entete {
-	background: #181A12;
+	background: #ff00c3;
 }
 
 /* Navigation #181A12; */
@@ -63,6 +63,7 @@ strong {
 /* Pied de page */
 #pied {
 	color: #E6A948;
+	background: #ff00c3;
 }
 
 /* Formulaire */
