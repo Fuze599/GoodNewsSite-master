@@ -41,6 +41,14 @@ switch($action) {
 	}
 	# Exécution du contrôleur correspondant à l'action demandée
 	$controller->run();
+
+
+ougaszd
+	z
+	z
+	z
+	
+	z
 	
 	# Ecrire ici le footer du site de toutes pages HTML
 	require_once(VIEW_PATH . 'footer.php');
